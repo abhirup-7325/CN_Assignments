@@ -23,7 +23,11 @@ public class Server {
                     // String validatedMessage = validator.validateMessage(line);
                     System.out.println("Size: " + line.length());
 
-                    CrcValidator crcValidator = new CrcValidator("1011");
+                    String crc8 = "111010101";
+                    String crc10 = "11000110011";
+                    String crc16 = "11000000000000101";
+                    String crc32 = "100000100110000010001110110110111";
+                    CrcValidator crcValidator = new CrcValidator(crc16);
                     String validatedMessage = crcValidator.validateMessage(line);
 
                     System.out.println(validatedMessage);

@@ -22,8 +22,13 @@ public class Client {
         // ChecksumCalculator checksumCalculator = new ChecksumCalculator();
         // blocks = checksumCalculator.calculateChecksum(blocks);
 
+        String crc8 = "111010101";
+        String crc10 = "11000110011";
+        String crc16 = "11000000000000101";
+        String crc32 = "100000100110000010001110110110111";
+
         CrcCalculator crcCalculator = new CrcCalculator();
-        blocks = crcCalculator.calculateCrc(blocks, "1011");
+        blocks = crcCalculator.calculateCrc(blocks, crc16);
 
         ErrorInjector errorInjector = new ErrorInjector();
         blocks = errorInjector.injectError(blocks, CODE_BLOCK_SIZE);
