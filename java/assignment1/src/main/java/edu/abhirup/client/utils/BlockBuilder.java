@@ -37,6 +37,7 @@ public class BlockBuilder {
             while ((content = fis.read()) != -1) {
                 str += (char) content;
             }
+            System.out.println("String size: " + str.length());
             fis.close();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -49,6 +50,9 @@ public class BlockBuilder {
 
     public ArrayList<ArrayList<Integer>> readBlocksFromInputBox(int blockSize) {
         String userInput = InputBoxWindow.showInputDialog(null);
-        return buildBlocks(userInput, blockSize);
+
+        String result = "localhost " + "localhost " + userInput;
+
+        return buildBlocks(result, blockSize);
     }
 }

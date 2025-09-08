@@ -17,6 +17,7 @@ public class ErrorInjector {
 
             // Random error type: 0=single, 1=two, 2=burst, 3=odd number, rest=no error
             int errorType = random.nextInt(10); 
+            // int errorType = 3;
 
             switch (errorType) {
                 case 0:

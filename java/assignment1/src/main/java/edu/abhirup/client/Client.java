@@ -12,12 +12,12 @@ import edu.abhirup.client.utils.ErrorInjector;
 
 public class Client {
     public static void main(String[] args) {
-        int DATA_BLOCK_SIZE = 4;
+        int DATA_BLOCK_SIZE = 62;
         int CODE_BLOCK_SIZE = DATA_BLOCK_SIZE + 2;
         String INPUT_FILE_PATH = "src/main/resources/io/input.txt";
 
         BlockBuilder blockBuilder = new BlockBuilder();
-        ArrayList<ArrayList<Integer>> blocks = blockBuilder.readBlocksFromInputBox(DATA_BLOCK_SIZE);
+        ArrayList<ArrayList<Integer>> blocks = blockBuilder.readBlocksFromFile(INPUT_FILE_PATH, DATA_BLOCK_SIZE);
 
         // ChecksumCalculator checksumCalculator = new ChecksumCalculator();
         // blocks = checksumCalculator.calculateChecksum(blocks);
